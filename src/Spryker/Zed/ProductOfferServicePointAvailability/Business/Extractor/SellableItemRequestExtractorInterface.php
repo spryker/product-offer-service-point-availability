@@ -10,7 +10,7 @@ namespace Spryker\Zed\ProductOfferServicePointAvailability\Business\Extractor;
 interface SellableItemRequestExtractorInterface
 {
     /**
-     * @param list<\Generated\Shared\Transfer\SellableItemRequestTransfer> $sellableItemRequestTransfers
+     * @param array<\Generated\Shared\Transfer\SellableItemRequestTransfer> $sellableItemRequestTransfers
      *
      * @return list<string>
      */
