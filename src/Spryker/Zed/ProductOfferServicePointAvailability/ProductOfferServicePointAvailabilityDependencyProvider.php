@@ -24,11 +24,6 @@ class ProductOfferServicePointAvailabilityDependencyProvider extends AbstractBun
      */
     public const FACADE_PRODUCT_OFFER = 'FACADE_PRODUCT_OFFER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -39,11 +34,6 @@ class ProductOfferServicePointAvailabilityDependencyProvider extends AbstractBun
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductOfferServicePointFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_OFFER_SERVICE_POINT, function (Container $container) {
@@ -55,11 +45,6 @@ class ProductOfferServicePointAvailabilityDependencyProvider extends AbstractBun
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductOfferFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_OFFER, function (Container $container) {

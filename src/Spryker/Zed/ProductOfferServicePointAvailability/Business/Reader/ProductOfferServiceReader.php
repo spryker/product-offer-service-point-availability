@@ -19,9 +19,6 @@ class ProductOfferServiceReader implements ProductOfferServiceReaderInterface
      */
     protected ProductOfferServicePointAvailabilityToProductOfferServicePointFacadeInterface $productOfferServicePointFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferServicePointAvailability\Dependency\Facade\ProductOfferServicePointAvailabilityToProductOfferServicePointFacadeInterface $productOfferServicePointFacade
-     */
     public function __construct(ProductOfferServicePointAvailabilityToProductOfferServicePointFacadeInterface $productOfferServicePointFacade)
     {
         $this->productOfferServicePointFacade = $productOfferServicePointFacade;

@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\SellableItemsResponseTransfer;
 
 interface ProductOfferServicePointAvailabilityReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemsRequestTransfer $sellableItemsRequestTransfer
-     * @param \Generated\Shared\Transfer\SellableItemsResponseTransfer $sellableItemsResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\SellableItemsResponseTransfer
-     */
     public function getItemsAvailabilityForStore(
         SellableItemsRequestTransfer $sellableItemsRequestTransfer,
         SellableItemsResponseTransfer $sellableItemsResponseTransfer

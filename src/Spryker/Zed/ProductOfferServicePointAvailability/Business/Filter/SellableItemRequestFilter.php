@@ -32,11 +32,6 @@ class SellableItemRequestFilter implements SellableItemRequestFilterInterface
         return new ArrayObject($filteredSellableItemRequestTransfers);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemRequestTransfer $sellableItemRequestTransfer
-     *
-     * @return bool
-     */
     protected function hasProductOfferReferenceAndServicePoint(SellableItemRequestTransfer $sellableItemRequestTransfer): bool
     {
         $productAvailabilityCriteriaTransfer = $sellableItemRequestTransfer->getProductAvailabilityCriteria();

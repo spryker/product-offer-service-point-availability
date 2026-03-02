@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\SellableItemsResponseTransfer;
 
 interface SellableItemsResponseExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemsResponseTransfer $sellableItemsResponseTransfer
-     * @param \Generated\Shared\Transfer\SellableItemRequestTransfer $sellableItemRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\SellableItemsResponseTransfer
-     */
     public function expandSellableItemsResponseWithNotSellableItem(
         SellableItemsResponseTransfer $sellableItemsResponseTransfer,
         SellableItemRequestTransfer $sellableItemRequestTransfer

@@ -43,13 +43,6 @@ class ProductOfferServicePointAvailabilityReader implements ProductOfferServiceP
      */
     protected SellableItemRequestFilterInterface $sellableItemRequestFilter;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferServicePointAvailability\Business\Reader\ProductOfferReaderInterface $productOfferReader
-     * @param \Spryker\Zed\ProductOfferServicePointAvailability\Business\Extractor\SellableItemRequestExtractorInterface $sellableItemRequestExtractor
-     * @param \Spryker\Zed\ProductOfferServicePointAvailability\Business\Reader\ProductOfferServiceReaderInterface $productOfferServiceReader
-     * @param \Spryker\Zed\ProductOfferServicePointAvailability\Business\Expander\SellableItemsResponseExpanderInterface $sellableItemsResponseExpander
-     * @param \Spryker\Zed\ProductOfferServicePointAvailability\Business\Filter\SellableItemRequestFilterInterface $sellableItemRequestFilter
-     */
     public function __construct(
         ProductOfferReaderInterface $productOfferReader,
         SellableItemRequestExtractorInterface $sellableItemRequestExtractor,
@@ -64,12 +57,6 @@ class ProductOfferServicePointAvailabilityReader implements ProductOfferServiceP
         $this->sellableItemRequestFilter = $sellableItemRequestFilter;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemsRequestTransfer $sellableItemsRequestTransfer
-     * @param \Generated\Shared\Transfer\SellableItemsResponseTransfer $sellableItemsResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\SellableItemsResponseTransfer
-     */
     public function getItemsAvailabilityForStore(
         SellableItemsRequestTransfer $sellableItemsRequestTransfer,
         SellableItemsResponseTransfer $sellableItemsResponseTransfer
@@ -135,11 +122,6 @@ class ProductOfferServicePointAvailabilityReader implements ProductOfferServiceP
         return $sellableItemRequestTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemRequestTransfer $sellableItemRequestTransfer
-     *
-     * @return bool
-     */
     protected function isSellableItemRequestTransferValid(SellableItemRequestTransfer $sellableItemRequestTransfer): bool
     {
         $productAvailabilityCriteriaTransfer = $sellableItemRequestTransfer->getProductAvailabilityCriteria();

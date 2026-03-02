@@ -13,12 +13,6 @@ use Generated\Shared\Transfer\SellableItemsResponseTransfer;
 
 class SellableItemsResponseExpander implements SellableItemsResponseExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemsResponseTransfer $sellableItemsResponseTransfer
-     * @param \Generated\Shared\Transfer\SellableItemRequestTransfer $sellableItemRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\SellableItemsResponseTransfer
-     */
     public function expandSellableItemsResponseWithNotSellableItem(
         SellableItemsResponseTransfer $sellableItemsResponseTransfer,
         SellableItemRequestTransfer $sellableItemRequestTransfer
@@ -30,12 +24,6 @@ class SellableItemsResponseExpander implements SellableItemsResponseExpanderInte
         return $sellableItemsResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemsResponseTransfer $sellableItemsResponseTransfer
-     * @param \Generated\Shared\Transfer\SellableItemRequestTransfer $sellableItemRequestTransfer
-     *
-     * @return bool
-     */
     protected function hasSellableItemsResponseNotSellableItem(
         SellableItemsResponseTransfer $sellableItemsResponseTransfer,
         SellableItemRequestTransfer $sellableItemRequestTransfer
@@ -52,11 +40,6 @@ class SellableItemsResponseExpander implements SellableItemsResponseExpanderInte
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SellableItemRequestTransfer $sellableItemRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\SellableItemResponseTransfer
-     */
     protected function createNotSellableItemResponseTransfer(SellableItemRequestTransfer $sellableItemRequestTransfer): SellableItemResponseTransfer
     {
         return (new SellableItemResponseTransfer())

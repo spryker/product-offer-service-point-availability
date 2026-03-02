@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ProductOfferServiceCriteriaTransfer;
 
 interface ProductOfferServicePointAvailabilityToProductOfferServicePointFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServiceCriteriaTransfer $productOfferServiceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServiceCollectionTransfer
-     */
     public function getProductOfferServiceCollection(
         ProductOfferServiceCriteriaTransfer $productOfferServiceCriteriaTransfer
     ): ProductOfferServiceCollectionTransfer;

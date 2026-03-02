@@ -25,11 +25,6 @@ class ProductOfferServicePointAvailabilityToProductOfferServicePointFacadeBridge
         $this->productOfferServicePointFacade = $productOfferServicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServiceCriteriaTransfer $productOfferServiceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServiceCollectionTransfer
-     */
     public function getProductOfferServiceCollection(
         ProductOfferServiceCriteriaTransfer $productOfferServiceCriteriaTransfer
     ): ProductOfferServiceCollectionTransfer {

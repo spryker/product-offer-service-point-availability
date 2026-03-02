@@ -67,9 +67,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
      */
     protected ProductOfferServicePointAvailabilityBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateServicePointWithValidRequest(): void
     {
         // Arrange
@@ -109,9 +106,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         $this->assertCount(0, $sellableItemsResponseTransfer->getSellableItemResponses());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateServicePointWithInvalidRequest(): void
     {
         // Arrange
@@ -140,9 +134,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testValidateServicePointWithInvalidRequestWhenResponseAlreadyHasNotSellableItem(): void
     {
         // Arrange
@@ -166,9 +157,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         $this->assertCount(1, $sellableItemsResponseTransfer->getSellableItemResponses());
     }
 
-    /**
-     * @return void
-     */
     public function testSkipValidationForRequestWithoutProductOfferReference(): void
     {
         // Arrange
@@ -194,9 +182,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         $this->assertCount(0, $sellableItemsResponseTransfer->getSellableItemResponses());
     }
 
-    /**
-     * @return void
-     */
     public function testSkipValidationForRequestWithoutServicePoint(): void
     {
         // Arrange
@@ -220,12 +205,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         $this->assertCount(0, $sellableItemsResponseTransfer->getSellableItemResponses());
     }
 
-    /**
-     * @param int $callCount
-     * @param \Generated\Shared\Transfer\ProductOfferCollectionTransfer $productOfferCollectionTransfer
-     *
-     * @return void
-     */
     protected function mockProductOfferFacade(int $callCount, ProductOfferCollectionTransfer $productOfferCollectionTransfer): void
     {
         $productOfferFacadeMock = $this->createMock(ProductOfferServicePointAvailabilityToProductOfferFacadeBridge::class);
@@ -237,12 +216,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         $this->tester->setDependency(ProductOfferServicePointAvailabilityDependencyProvider::FACADE_PRODUCT_OFFER, $productOfferFacadeMock);
     }
 
-    /**
-     * @param int $callCount
-     * @param \Generated\Shared\Transfer\ProductOfferServiceCollectionTransfer $productOfferServiceCollectionTransfer
-     *
-     * @return void
-     */
     protected function mockProductOfferServicePointFacade(int $callCount, ProductOfferServiceCollectionTransfer $productOfferServiceCollectionTransfer): void
     {
         $productOfferServicePointFacadeMock = $this->createMock(ProductOfferServicePointAvailabilityToProductOfferServicePointFacadeBridge::class);
@@ -254,9 +227,6 @@ class GetItemsAvailabilityForStoreTest extends Unit
         $this->tester->setDependency(ProductOfferServicePointAvailabilityDependencyProvider::FACADE_PRODUCT_OFFER_SERVICE_POINT, $productOfferServicePointFacadeMock);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductAvailabilityCriteriaTransfer
-     */
     protected function getInvalidProductAvailabilityCriteriaTransfer(): ProductAvailabilityCriteriaTransfer
     {
         $productOfferTransfer = (new ProductOfferTransfer())
